@@ -1,0 +1,6 @@
+framework module Pods_AssetsManager {
+  umbrella header "Pods-AssetsManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
