@@ -13,7 +13,7 @@ class StockManager {
     var stockList:[Stock] = []
     var myGroup:DispatchGroup?
     
-    func test(){
+    func refresh(){
         self.stockList = self.getStockListFormLocal()
         for stock in self.stockList {
             DispatchQueue(label: "queuename").async {
