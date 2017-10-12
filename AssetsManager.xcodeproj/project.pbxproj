@@ -15,6 +15,10 @@
 		397640DF1F8F2BEE00BA97C8 /* AssetsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640DE1F8F2BEE00BA97C8 /* AssetsManagerTests.swift */; };
 		397640EA1F8F2BEE00BA97C8 /* AssetsManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640E91F8F2BEE00BA97C8 /* AssetsManagerUITests.swift */; };
 		397640F91F8F2C0F00BA97C8 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640F81F8F2C0F00BA97C8 /* Stock.swift */; };
+		397640FC1F8F311D00BA97C8 /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640FB1F8F311D00BA97C8 /* StockManager.swift */; };
+		397640FF1F8F387200BA97C8 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 397640FE1F8F386C00BA97C8 /* GoogleService-Info.plist */; };
+		397641011F8F3DB000BA97C8 /* stocks.plist in Sources */ = {isa = PBXBuildFile; fileRef = 397641001F8F3A7400BA97C8 /* stocks.plist */; };
+		397641031F8F478C00BA97C8 /* PersistantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397641021F8F478C00BA97C8 /* PersistantHelper.swift */; };
 		A16E9C51C7EA43CCBE2380B2 /* Pods_AssetsManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7B5190C35AA906E7177DC9 /* Pods_AssetsManagerTests.framework */; };
 		A4493409BD8B200E69F4AAC3 /* Pods_AssetsManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AC072FCEFABBCD7B059567 /* Pods_AssetsManagerUITests.framework */; };
 		FD093EC751F49558AD3C6804 /* Pods_AssetsManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964979BDF53A71518376E54B /* Pods_AssetsManager.framework */; };
@@ -54,7 +58,10 @@
 		397640E91F8F2BEE00BA97C8 /* AssetsManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsManagerUITests.swift; sourceTree = "<group>"; };
 		397640EB1F8F2BEE00BA97C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		397640F81F8F2C0F00BA97C8 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
-		397640FA1F8F2F7100BA97C8 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		397640FB1F8F311D00BA97C8 /* StockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
+		397640FE1F8F386C00BA97C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		397641001F8F3A7400BA97C8 /* stocks.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = stocks.plist; sourceTree = "<group>"; };
+		397641021F8F478C00BA97C8 /* PersistantHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantHelper.swift; sourceTree = "<group>"; };
 		7D451E186A166EB69AE9D6BC /* Pods-AssetsManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetsManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-AssetsManager/Pods-AssetsManager.release.xcconfig"; sourceTree = "<group>"; };
 		8B02364A1CBC6352C3337A9E /* Pods-AssetsManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetsManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AssetsManagerUITests/Pods-AssetsManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		91AC072FCEFABBCD7B059567 /* Pods_AssetsManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssetsManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +131,8 @@
 				397640D01F8F2BEE00BA97C8 /* Assets.xcassets */,
 				397640D21F8F2BEE00BA97C8 /* LaunchScreen.storyboard */,
 				397640D51F8F2BEE00BA97C8 /* Info.plist */,
-				397640FA1F8F2F7100BA97C8 /* GoogleService-Info (1).plist */,
+				397641001F8F3A7400BA97C8 /* stocks.plist */,
+				397640FE1F8F386C00BA97C8 /* GoogleService-Info.plist */,
 			);
 			path = AssetsManager;
 			sourceTree = "<group>";
@@ -151,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				397640F81F8F2C0F00BA97C8 /* Stock.swift */,
+				397640FB1F8F311D00BA97C8 /* StockManager.swift */,
+				397641021F8F478C00BA97C8 /* PersistantHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,12 +364,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AssetsManager/Pods-AssetsManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +487,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				397641031F8F478C00BA97C8 /* PersistantHelper.swift in Sources */,
+				397641011F8F3DB000BA97C8 /* stocks.plist in Sources */,
+				397640FF1F8F387200BA97C8 /* GoogleService-Info.plist in Sources */,
+				397640FC1F8F311D00BA97C8 /* StockManager.swift in Sources */,
 				397640CC1F8F2BEE00BA97C8 /* ViewController.swift in Sources */,
 				397640CA1F8F2BEE00BA97C8 /* AppDelegate.swift in Sources */,
 				397640F91F8F2C0F00BA97C8 /* Stock.swift in Sources */,
@@ -644,7 +662,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AssetsManager/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.min.assetmanager.AssetsManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -660,7 +678,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AssetsManager/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.min.assetmanager.AssetsManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
