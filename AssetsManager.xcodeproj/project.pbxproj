@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3957059F1F908EC8006F5049 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3957059E1F908EC8006F5049 /* StockViewController.swift */; };
+		395705A31F908F4C006F5049 /* StockTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395705A21F908F4C006F5049 /* StockTableviewCell.swift */; };
+		395705A51F90969F006F5049 /* UIColor+UNTAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395705A41F90969F006F5049 /* UIColor+UNTAdditions.swift */; };
+		395705A71F90B425006F5049 /* SortOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395705A61F90B425006F5049 /* SortOptionCell.swift */; };
 		397640CA1F8F2BEE00BA97C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640C91F8F2BEE00BA97C8 /* AppDelegate.swift */; };
 		397640CC1F8F2BEE00BA97C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640CB1F8F2BEE00BA97C8 /* ViewController.swift */; };
 		397640CF1F8F2BEE00BA97C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397640CD1F8F2BEE00BA97C8 /* Main.storyboard */; };
@@ -17,8 +21,9 @@
 		397640F91F8F2C0F00BA97C8 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640F81F8F2C0F00BA97C8 /* Stock.swift */; };
 		397640FC1F8F311D00BA97C8 /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640FB1F8F311D00BA97C8 /* StockManager.swift */; };
 		397640FF1F8F387200BA97C8 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 397640FE1F8F386C00BA97C8 /* GoogleService-Info.plist */; };
-		397641011F8F3DB000BA97C8 /* stocks.plist in Sources */ = {isa = PBXBuildFile; fileRef = 397641001F8F3A7400BA97C8 /* stocks.plist */; };
 		397641031F8F478C00BA97C8 /* PersistantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397641021F8F478C00BA97C8 /* PersistantHelper.swift */; };
+		39DDE7DF1F9AD6F600F30370 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDE7DE1F9AD6F600F30370 /* Utility.swift */; };
+		39DDE7E01F9AEB1E00F30370 /* stocks.plist in Sources */ = {isa = PBXBuildFile; fileRef = 397641001F8F3A7400BA97C8 /* stocks.plist */; };
 		A16E9C51C7EA43CCBE2380B2 /* Pods_AssetsManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7B5190C35AA906E7177DC9 /* Pods_AssetsManagerTests.framework */; };
 		A4493409BD8B200E69F4AAC3 /* Pods_AssetsManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AC072FCEFABBCD7B059567 /* Pods_AssetsManagerUITests.framework */; };
 		FD093EC751F49558AD3C6804 /* Pods_AssetsManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964979BDF53A71518376E54B /* Pods_AssetsManager.framework */; };
@@ -44,6 +49,10 @@
 /* Begin PBXFileReference section */
 		2028C2C8E8F8A510E5B89C60 /* Pods-AssetsManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetsManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AssetsManagerTests/Pods-AssetsManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		24A0BC09F5FACB80BBFB45D2 /* Pods-AssetsManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetsManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AssetsManager/Pods-AssetsManager.debug.xcconfig"; sourceTree = "<group>"; };
+		3957059E1F908EC8006F5049 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		395705A21F908F4C006F5049 /* StockTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableviewCell.swift; sourceTree = "<group>"; };
+		395705A41F90969F006F5049 /* UIColor+UNTAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+UNTAdditions.swift"; sourceTree = "<group>"; };
+		395705A61F90B425006F5049 /* SortOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOptionCell.swift; sourceTree = "<group>"; };
 		397640C61F8F2BEE00BA97C8 /* AssetsManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetsManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397640C91F8F2BEE00BA97C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		397640CB1F8F2BEE00BA97C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +71,7 @@
 		397640FE1F8F386C00BA97C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		397641001F8F3A7400BA97C8 /* stocks.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = stocks.plist; sourceTree = "<group>"; };
 		397641021F8F478C00BA97C8 /* PersistantHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantHelper.swift; sourceTree = "<group>"; };
+		39DDE7DE1F9AD6F600F30370 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		7D451E186A166EB69AE9D6BC /* Pods-AssetsManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetsManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-AssetsManager/Pods-AssetsManager.release.xcconfig"; sourceTree = "<group>"; };
 		8B02364A1CBC6352C3337A9E /* Pods-AssetsManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetsManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AssetsManagerUITests/Pods-AssetsManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		91AC072FCEFABBCD7B059567 /* Pods_AssetsManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssetsManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +109,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3957059D1F908EA3006F5049 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3957059E1F908EC8006F5049 /* StockViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		395705A01F908F2B006F5049 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				395705A21F908F4C006F5049 /* StockTableviewCell.swift */,
+				395705A61F90B425006F5049 /* SortOptionCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		395705A11F908F32006F5049 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		397640BD1F8F2BEE00BA97C8 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +158,9 @@
 		397640C81F8F2BEE00BA97C8 /* AssetsManager */ = {
 			isa = PBXGroup;
 			children = (
+				395705A11F908F32006F5049 /* ViewModels */,
+				395705A01F908F2B006F5049 /* Views */,
+				3957059D1F908EA3006F5049 /* ViewControllers */,
 				397640F71F8F2C0200BA97C8 /* Model */,
 				397640C91F8F2BEE00BA97C8 /* AppDelegate.swift */,
 				397640CB1F8F2BEE00BA97C8 /* ViewController.swift */,
@@ -131,6 +168,7 @@
 				397640D01F8F2BEE00BA97C8 /* Assets.xcassets */,
 				397640D21F8F2BEE00BA97C8 /* LaunchScreen.storyboard */,
 				397640D51F8F2BEE00BA97C8 /* Info.plist */,
+				395705A41F90969F006F5049 /* UIColor+UNTAdditions.swift */,
 				397641001F8F3A7400BA97C8 /* stocks.plist */,
 				397640FE1F8F386C00BA97C8 /* GoogleService-Info.plist */,
 			);
@@ -161,6 +199,7 @@
 				397640F81F8F2C0F00BA97C8 /* Stock.swift */,
 				397640FB1F8F311D00BA97C8 /* StockManager.swift */,
 				397641021F8F478C00BA97C8 /* PersistantHelper.swift */,
+				39DDE7DE1F9AD6F600F30370 /* Utility.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,14 +404,30 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AssetsManager/Pods-AssetsManager-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -487,13 +542,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DDE7E01F9AEB1E00F30370 /* stocks.plist in Sources */,
 				397641031F8F478C00BA97C8 /* PersistantHelper.swift in Sources */,
-				397641011F8F3DB000BA97C8 /* stocks.plist in Sources */,
 				397640FF1F8F387200BA97C8 /* GoogleService-Info.plist in Sources */,
+				395705A51F90969F006F5049 /* UIColor+UNTAdditions.swift in Sources */,
 				397640FC1F8F311D00BA97C8 /* StockManager.swift in Sources */,
 				397640CC1F8F2BEE00BA97C8 /* ViewController.swift in Sources */,
+				395705A31F908F4C006F5049 /* StockTableviewCell.swift in Sources */,
 				397640CA1F8F2BEE00BA97C8 /* AppDelegate.swift in Sources */,
+				39DDE7DF1F9AD6F600F30370 /* Utility.swift in Sources */,
+				395705A71F90B425006F5049 /* SortOptionCell.swift in Sources */,
 				397640F91F8F2C0F00BA97C8 /* Stock.swift in Sources */,
+				3957059F1F908EC8006F5049 /* StockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

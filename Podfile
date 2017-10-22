@@ -9,7 +9,9 @@ target 'AssetsManager' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   pod 'Alamofire'
+  pod 'NVActivityIndicatorView'
 
   target 'AssetsManagerTests' do
     inherit! :search_paths

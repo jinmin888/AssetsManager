@@ -134,5 +134,55 @@
 	<string>삼성전자</string>
 	<key>003550</key>
 	<string>LG</string>
-</dict>
+    <key>047050</key>
+    <string>포스코대우</string>
+    <key>010060</key>
+    <string>OCI</string>
+    <key>007310</key>
+    <string>오뚜기</string>
+    <key>006260</key>
+    <string>LS</string>
+    <key>007070</key>
+    <string>GS리테일</string>
+    <key>026960</key>
+    <string>동서</string>
+    <key>008560</key>
+    <string>메리츠종금증권</string>
+    <key>204320</key>
+    <string>만도</string>
+    <key>012630</key>
+    <string>현대산업</string>
+    <key>000060</key>
+    <string>메리츠화재</string>
+    <key>000150</key>
+    <string>두산</string>
+    <key>003490</key>
+    <string>대한항공</string>
+    <key>047040</key>
+    <string>대우건설</string>
+    <key>000210</key>
+    <string>대림산업</string>
+    <key>088980</key>
+    <string>맥쿼리인프라</string>
+    <key>028670</key>
+    <string>팬오션</string>
+    <key>016360</key>
+    <string>삼성증권</string>
+    <key>138930</key>
+    <string>BNK금융지주</string>
+    <key>000880</key>
+    <string>한화</string>
+    <key>012750</key>
+    <string>에스원</string>
+    <key>071050</key>
+    <string>한국금융지주</string>
+    <key>011070</key>
+    <string>LG이노텍</string>
+    <key>001800</key>
+    <string>오리온</string>
+    <key>241560</key>
+    <string>두산밥캣</string>
+    <key>009240</key>
+    <string>한샘</string>
+    </dict>
 </plist>

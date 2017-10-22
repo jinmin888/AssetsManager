@@ -8,19 +8,32 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseFirestore
 
-class PersistantHelper {
-    let rootName = "stocks"
+protocol PersistantHelper {
     
-    func addStock(stock:Stock){
-        self.dbReference(stock.stockName).setValue(stock.toJSON())
+}
+
+class FirestorePersistantHelper:PersistantHelper {
+    
+    static let shared = FirestorePersistantHelper()
+    
+    public func addStock(stock:Stock){
+        stockDatabaseInstance().document(stock.stockCode).setData(stock.toJSON());
     }
     
-    private func dbReference() -> DatabaseReference {
-        return Database.database().reference().child(rootName)
+    public func stockDataInstance(_ day:String) -> CollectionReference {
+        return Firestore.firestore().collection("Korea").document("stockmarket").collection(day)
     }
-    private func dbReference(_ byStock:String) -> DatabaseReference {
-        return self.dbReference().child(byStock)
+    
+    public func addStocks(stocks:Array<Stock>,_ completion:(Error)) -> Void{
+        stocks.forEach { stock in
+            addStock(stock: stock)
+        }
+    }
+    
+    private func stockDatabaseInstance() -> CollectionReference {
+        return Firestore.firestore().collection("Korea").document("stockmarket").collection(Utility.currentDate())
     }
     
 }
