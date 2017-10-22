@@ -22,6 +22,8 @@
 		397640FC1F8F311D00BA97C8 /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397640FB1F8F311D00BA97C8 /* StockManager.swift */; };
 		397640FF1F8F387200BA97C8 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 397640FE1F8F386C00BA97C8 /* GoogleService-Info.plist */; };
 		397641031F8F478C00BA97C8 /* PersistantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397641021F8F478C00BA97C8 /* PersistantHelper.swift */; };
+		39A1A9BF1F9C77FC005E44EA /* StockEpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1A9BE1F9C77FC005E44EA /* StockEpsViewController.swift */; };
+		39A1A9C11F9C97FC005E44EA /* StockEpsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1A9C01F9C97FC005E44EA /* StockEpsCell.swift */; };
 		39DDE7DF1F9AD6F600F30370 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDE7DE1F9AD6F600F30370 /* Utility.swift */; };
 		39DDE7E01F9AEB1E00F30370 /* stocks.plist in Sources */ = {isa = PBXBuildFile; fileRef = 397641001F8F3A7400BA97C8 /* stocks.plist */; };
 		A16E9C51C7EA43CCBE2380B2 /* Pods_AssetsManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7B5190C35AA906E7177DC9 /* Pods_AssetsManagerTests.framework */; };
@@ -71,6 +73,8 @@
 		397640FE1F8F386C00BA97C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		397641001F8F3A7400BA97C8 /* stocks.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = stocks.plist; sourceTree = "<group>"; };
 		397641021F8F478C00BA97C8 /* PersistantHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantHelper.swift; sourceTree = "<group>"; };
+		39A1A9BE1F9C77FC005E44EA /* StockEpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockEpsViewController.swift; sourceTree = "<group>"; };
+		39A1A9C01F9C97FC005E44EA /* StockEpsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockEpsCell.swift; sourceTree = "<group>"; };
 		39DDE7DE1F9AD6F600F30370 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		7D451E186A166EB69AE9D6BC /* Pods-AssetsManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetsManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-AssetsManager/Pods-AssetsManager.release.xcconfig"; sourceTree = "<group>"; };
 		8B02364A1CBC6352C3337A9E /* Pods-AssetsManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetsManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AssetsManagerUITests/Pods-AssetsManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				3957059E1F908EC8006F5049 /* StockViewController.swift */,
+				39A1A9BE1F9C77FC005E44EA /* StockEpsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			children = (
 				395705A21F908F4C006F5049 /* StockTableviewCell.swift */,
 				395705A61F90B425006F5049 /* SortOptionCell.swift */,
+				39A1A9C01F9C97FC005E44EA /* StockEpsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -424,6 +431,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -547,9 +555,11 @@
 				397640FF1F8F387200BA97C8 /* GoogleService-Info.plist in Sources */,
 				395705A51F90969F006F5049 /* UIColor+UNTAdditions.swift in Sources */,
 				397640FC1F8F311D00BA97C8 /* StockManager.swift in Sources */,
+				39A1A9BF1F9C77FC005E44EA /* StockEpsViewController.swift in Sources */,
 				397640CC1F8F2BEE00BA97C8 /* ViewController.swift in Sources */,
 				395705A31F908F4C006F5049 /* StockTableviewCell.swift in Sources */,
 				397640CA1F8F2BEE00BA97C8 /* AppDelegate.swift in Sources */,
+				39A1A9C11F9C97FC005E44EA /* StockEpsCell.swift in Sources */,
 				39DDE7DF1F9AD6F600F30370 /* Utility.swift in Sources */,
 				395705A71F90B425006F5049 /* SortOptionCell.swift in Sources */,
 				397640F91F8F2C0F00BA97C8 /* Stock.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qnF-Ls-oZI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wEG-5v-LDy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -129,6 +129,191 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rM4-NQ-J3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="130.88455772113943"/>
+        </scene>
+        <!--Stock Eps View Controller-->
+        <scene sceneID="URg-1A-VNa">
+            <objects>
+                <viewController id="wEG-5v-LDy" customClass="StockEpsViewController" customModule="AssetsManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXm-aC-t4W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="시작날짜" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eef-XN-FgZ" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="10" y="30" width="170" height="30"/>
+                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Kb0-WO-yfk"/>
+                                    <constraint firstAttribute="width" constant="170" id="mhK-K8-lat"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.44936042749999999" green="0.44936042749999999" blue="0.44936042749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                        <color key="value" red="0.23921568630000001" green="0.23137254900000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                        <color key="value" red="0.44936042749999999" green="0.44936042749999999" blue="0.44936042749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnz-vm-WhZ">
+                                <rect key="frame" x="220" y="30" width="145" height="60"/>
+                                <color key="backgroundColor" red="0.31010955572128296" green="0.34303605556488037" blue="0.94907647371292114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="m1f-iv-GAf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="데이터가져오기">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dateRefreshButtonTap:" destination="wEG-5v-LDy" eventType="touchDown" id="HJC-Wg-ckp"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7WK-ka-IeT">
+                                <rect key="frame" x="0.0" y="115" width="375" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="sGw-h5-akd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="sSl-pZ-dzE"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="내년eps변동"/>
+                                    <segment title="내후년eps변동"/>
+                                </segments>
+                                <connections>
+                                    <action selector="epsSelectChanged:" destination="wEG-5v-LDy" eventType="valueChanged" id="rE3-09-mk8"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5qW-NE-cvV">
+                                <rect key="frame" x="0.0" y="151" width="375" height="516"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockepscell" rowHeight="71" id="lGp-bC-6N7" customClass="StockEpsCell" customModule="AssetsManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lGp-bC-6N7" id="d6Y-Xs-2YJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stockname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kww-ck-v5n">
+                                                    <rect key="frame" x="8" y="8" width="143" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSR-qL-K8L">
+                                                    <rect key="frame" x="8" y="37" width="30" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.35950369202249433" green="0.36306313451776651" blue="0.36306313451776651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내후년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG9-eS-Khr">
+                                                    <rect key="frame" x="149" y="37" width="45" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.35950369202249433" green="0.36306313451776651" blue="0.36306313451776651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGk-Bw-dWL">
+                                                    <rect key="frame" x="46" y="37" width="71" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7n7-Rf-Xfa">
+                                                    <rect key="frame" x="202" y="36" width="71" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nextYear" destination="WGk-Bw-dWL" id="Fuv-ue-Wvc"/>
+                                            <outlet property="stockname" destination="kww-ck-v5n" id="nTt-CP-d8Y"/>
+                                            <outlet property="yearAfter" destination="7n7-Rf-Xfa" id="ReC-jO-vJs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wEG-5v-LDy" id="nJu-Sd-WSp"/>
+                                    <outlet property="delegate" destination="wEG-5v-LDy" id="tFs-Ms-tCO"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="끝날짜" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAM-pb-w0C" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="10" y="70" width="170" height="30"/>
+                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NI8-L9-ph9"/>
+                                    <constraint firstAttribute="width" constant="170" id="sl5-sO-qxW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.23921568630000001" green="0.23137254900000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                        <color key="value" red="0.31010955569999998" green="0.3430360556" blue="0.94907647370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                        <color key="value" red="0.23921568630000001" green="0.23137254900000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eef-XN-FgZ" firstAttribute="top" secondItem="7V0-eC-Yu6" secondAttribute="top" constant="10" id="60c-mU-Xrw"/>
+                            <constraint firstItem="5qW-NE-cvV" firstAttribute="trailing" secondItem="7V0-eC-Yu6" secondAttribute="trailing" id="CL2-aa-fyG"/>
+                            <constraint firstItem="LAM-pb-w0C" firstAttribute="top" secondItem="Eef-XN-FgZ" secondAttribute="bottom" constant="10" id="FMb-bJ-fCY"/>
+                            <constraint firstItem="5qW-NE-cvV" firstAttribute="top" secondItem="7WK-ka-IeT" secondAttribute="bottom" constant="8" id="GoY-Iz-a4p"/>
+                            <constraint firstItem="Eef-XN-FgZ" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" constant="10" id="NJI-x2-vnj"/>
+                            <constraint firstItem="xnz-vm-WhZ" firstAttribute="top" secondItem="bXm-aC-t4W" secondAttribute="top" constant="30" id="OHm-8e-LG5"/>
+                            <constraint firstItem="xnz-vm-WhZ" firstAttribute="leading" secondItem="Eef-XN-FgZ" secondAttribute="trailing" constant="40" id="PCo-gE-K6j"/>
+                            <constraint firstItem="5qW-NE-cvV" firstAttribute="bottom" secondItem="7V0-eC-Yu6" secondAttribute="bottom" id="UKF-PD-Tov"/>
+                            <constraint firstItem="7WK-ka-IeT" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" id="V5V-34-9Ps"/>
+                            <constraint firstItem="5qW-NE-cvV" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" id="VrD-eh-7QG"/>
+                            <constraint firstItem="7WK-ka-IeT" firstAttribute="trailing" secondItem="7V0-eC-Yu6" secondAttribute="trailing" id="WCJ-Cn-gnu"/>
+                            <constraint firstItem="7WK-ka-IeT" firstAttribute="top" secondItem="LAM-pb-w0C" secondAttribute="bottom" constant="15" id="cvO-AG-dnd"/>
+                            <constraint firstItem="7V0-eC-Yu6" firstAttribute="trailing" secondItem="xnz-vm-WhZ" secondAttribute="trailing" constant="10" id="pN7-ew-Azr"/>
+                            <constraint firstItem="LAM-pb-w0C" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" constant="10" id="pil-Rr-7tN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7V0-eC-Yu6"/>
+                    </view>
+                    <connections>
+                        <outlet property="endDateTextfield" destination="LAM-pb-w0C" id="Dkq-Ga-uwW"/>
+                        <outlet property="startDateTextfield" destination="Eef-XN-FgZ" id="g4a-6Y-kSG"/>
+                        <outlet property="stockListView" destination="5qW-NE-cvV" id="6yy-nB-nSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01w-Yb-7xK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.8" y="121.88905547226388"/>
         </scene>
         <!--부동산-->
         <scene sceneID="5sy-eO-5Iu">

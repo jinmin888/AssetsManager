@@ -12,7 +12,8 @@ target 'AssetsManager' do
   pod 'Firebase/Firestore'
   pod 'Alamofire'
   pod 'NVActivityIndicatorView'
-
+  pod 'TextFieldEffects'
+  
   target 'AssetsManagerTests' do
     inherit! :search_paths
     # Pods for testing

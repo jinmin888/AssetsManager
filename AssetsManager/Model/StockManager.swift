@@ -34,14 +34,16 @@ class StockManager {
     }
     
     public func checkEpsChange(startDate:String,endDate:String,completeHandler:@escaping (_ list:NSMutableDictionary)->Void){
+        var list = NSMutableDictionary()
         getStock(endDate) { (stockList, error) in
             self.getStock(startDate, completion: { (startStockList, secondError) in
                 stockList.forEach({ endStock in
                     if let found = startStockList.index(where: {$0.stockCode == endStock.stockCode}){
-                        let epsChanges = endStock.epsChange(stock: startStockList[found])
-                        completeHandler(epsChanges)
+                        //completeHandler(endStock.epsChange(stock: startStockList[found]))
+                        list.setValue(endStock.epsChange(stock: startStockList[found]), forKey: endStock.stockName)
                     }
                 })
+                completeHandler(list)
             })
         }
     }
