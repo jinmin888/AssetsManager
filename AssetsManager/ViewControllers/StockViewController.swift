@@ -62,16 +62,13 @@ class StockViewController: UITableViewController,UICollectionViewDataSource,UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if self.isInitStatus == true {
-            self.collectionView(self.headerView, didDeselectItemAt: IndexPath(item: 0, section: 0))
+            //self.collectionView(self.headerView, didDeselectItemAt: IndexPath(item: 0, section: 0))
             self.isInitStatus = false
         }
         let option = self.sortOption[indexPath.row]
         if "EPS비교" == option {
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "epsCompareVC") as UIViewController
-            var navigation = UINavigationController()
-            navigation.pushViewController(viewController, animated: false)
-            //self.presentViewController(viewController, animated: false, completion: nil)
-            self.present(navigation, animated: true, completion: {
+            self.present(viewController, animated: true, completion: {
                 
             });
         }
@@ -79,14 +76,13 @@ class StockViewController: UITableViewController,UICollectionViewDataSource,UICo
         cell.backgroundColor = UIColor.untSelectColor
         cell.textLabel.textColor = UIColor.white
         self.isInitStatus = true
-        
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell:SortOptionCell = collectionView.cellForItem(at: indexPath) as! SortOptionCell
-        cell.backgroundColor = UIColor.clear
-        cell.textLabel.textColor = UIColor.black
-    }
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        let cell:SortOptionCell = collectionView.cellForItem(at: indexPath) as! SortOptionCell
+//        cell.backgroundColor = UIColor.clear
+//        cell.textLabel.textColor = UIColor.black
+//    }
     
     func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -23,6 +23,7 @@ class StockEpsViewController:ViewController,UITableViewDelegate,UITableViewDataS
     
     @IBOutlet weak var stockListView: UITableView!
     @IBOutlet weak var startDateTextfield: UITextField!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
     var stockList = Array<StockEpsViewModel>()
     
@@ -33,6 +34,14 @@ class StockEpsViewController:ViewController,UITableViewDelegate,UITableViewDataS
         self.activityIndicator.isHidden = true
         self.endDateTextfield.text = Utility.currentDate()
     }
+    
+    @IBAction func back(_ sender: Any) {
+        print("back")
+        self.dismiss(animated: false) {
+            
+        }
+    }
+    
     @IBAction func epsSelectChanged(_ sender: UISegmentedControl) {
         print("select tap : \(sender.selectedSegmentIndex)")
         self.activityIndicator.isHidden = false

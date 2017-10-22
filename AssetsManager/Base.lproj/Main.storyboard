@@ -138,8 +138,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="시작날짜" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eef-XN-FgZ" customClass="YoshikoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="10" y="30" width="170" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="시작날짜" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eef-XN-FgZ" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="8" y="58" width="170" height="30"/>
                                 <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Kb0-WO-yfk"/>
@@ -169,22 +169,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnz-vm-WhZ">
-                                <rect key="frame" x="220" y="30" width="145" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnz-vm-WhZ">
+                                <rect key="frame" x="208" y="63" width="145" height="60"/>
                                 <color key="backgroundColor" red="0.31010955572128296" green="0.34303605556488037" blue="0.94907647371292114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="m1f-iv-GAf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="데이터가져오기">
+                                <state key="normal" title="갱신">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="dateRefreshButtonTap:" destination="wEG-5v-LDy" eventType="touchDown" id="HJC-Wg-ckp"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7WK-ka-IeT">
-                                <rect key="frame" x="0.0" y="115" width="375" height="29"/>
+                                <rect key="frame" x="0.0" y="161" width="375" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="sGw-h5-akd"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="sSl-pZ-dzE"/>
@@ -198,7 +199,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5qW-NE-cvV">
-                                <rect key="frame" x="0.0" y="151" width="375" height="516"/>
+                                <rect key="frame" x="0.0" y="197" width="375" height="470"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockepscell" rowHeight="71" id="lGp-bC-6N7" customClass="StockEpsCell" customModule="AssetsManager" customModuleProvider="target">
@@ -257,8 +258,8 @@
                                     <outlet property="delegate" destination="wEG-5v-LDy" id="tFs-Ms-tCO"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="끝날짜" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAM-pb-w0C" customClass="YoshikoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="10" y="70" width="170" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="끝날짜" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAM-pb-w0C" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="8" y="98" width="170" height="30"/>
                                 <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NI8-L9-ph9"/>
@@ -285,16 +286,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIr-Iy-Oee">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3zf-9r-Etc"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="EPS" id="8OU-Kg-qxo">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="654-aS-gZe">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NMf-Cj-xay">
+                                                <rect key="frame" x="16" y="7" width="44" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="&lt;Back">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="back:" destination="wEG-5v-LDy" eventType="touchDown" id="n2g-Ie-h7n"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Eef-XN-FgZ" firstAttribute="top" secondItem="7V0-eC-Yu6" secondAttribute="top" constant="10" id="60c-mU-Xrw"/>
+                            <constraint firstItem="wIr-Iy-Oee" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" id="56R-Cg-2bU"/>
+                            <constraint firstItem="Eef-XN-FgZ" firstAttribute="top" secondItem="wIr-Iy-Oee" secondAttribute="bottom" constant="10" id="60c-mU-Xrw"/>
                             <constraint firstItem="5qW-NE-cvV" firstAttribute="trailing" secondItem="7V0-eC-Yu6" secondAttribute="trailing" id="CL2-aa-fyG"/>
                             <constraint firstItem="LAM-pb-w0C" firstAttribute="top" secondItem="Eef-XN-FgZ" secondAttribute="bottom" constant="10" id="FMb-bJ-fCY"/>
                             <constraint firstItem="5qW-NE-cvV" firstAttribute="top" secondItem="7WK-ka-IeT" secondAttribute="bottom" constant="8" id="GoY-Iz-a4p"/>
                             <constraint firstItem="Eef-XN-FgZ" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" constant="10" id="NJI-x2-vnj"/>
-                            <constraint firstItem="xnz-vm-WhZ" firstAttribute="top" secondItem="bXm-aC-t4W" secondAttribute="top" constant="30" id="OHm-8e-LG5"/>
+                            <constraint firstItem="xnz-vm-WhZ" firstAttribute="top" secondItem="wIr-Iy-Oee" secondAttribute="bottom" constant="10" id="OHm-8e-LG5"/>
                             <constraint firstItem="xnz-vm-WhZ" firstAttribute="leading" secondItem="Eef-XN-FgZ" secondAttribute="trailing" constant="40" id="PCo-gE-K6j"/>
+                            <constraint firstItem="wIr-Iy-Oee" firstAttribute="trailing" secondItem="7V0-eC-Yu6" secondAttribute="trailing" id="RQP-aP-4RI"/>
                             <constraint firstItem="5qW-NE-cvV" firstAttribute="bottom" secondItem="7V0-eC-Yu6" secondAttribute="bottom" id="UKF-PD-Tov"/>
                             <constraint firstItem="7WK-ka-IeT" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" id="V5V-34-9Ps"/>
                             <constraint firstItem="5qW-NE-cvV" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" id="VrD-eh-7QG"/>
@@ -302,10 +331,12 @@
                             <constraint firstItem="7WK-ka-IeT" firstAttribute="top" secondItem="LAM-pb-w0C" secondAttribute="bottom" constant="15" id="cvO-AG-dnd"/>
                             <constraint firstItem="7V0-eC-Yu6" firstAttribute="trailing" secondItem="xnz-vm-WhZ" secondAttribute="trailing" constant="10" id="pN7-ew-Azr"/>
                             <constraint firstItem="LAM-pb-w0C" firstAttribute="leading" secondItem="7V0-eC-Yu6" secondAttribute="leading" constant="10" id="pil-Rr-7tN"/>
+                            <constraint firstItem="wIr-Iy-Oee" firstAttribute="top" secondItem="bXm-aC-t4W" secondAttribute="top" constant="22" id="vNo-Ax-3B9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7V0-eC-Yu6"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="654-aS-gZe" id="3rd-0P-xgd"/>
                         <outlet property="endDateTextfield" destination="LAM-pb-w0C" id="Dkq-Ga-uwW"/>
                         <outlet property="startDateTextfield" destination="Eef-XN-FgZ" id="g4a-6Y-kSG"/>
                         <outlet property="stockListView" destination="5qW-NE-cvV" id="6yy-nB-nSa"/>
