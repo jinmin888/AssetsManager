@@ -14,7 +14,7 @@ import NVActivityIndicatorView
 class StockViewController: UITableViewController,UICollectionViewDataSource,UICollectionViewDelegate{
     @IBOutlet weak var headerView: UICollectionView!
     var stockList:Array<Stock> = []
-    let sortOption = ["저평가순","고성장순","저PBR순"]
+    let sortOption = ["저평가순","고성장순","저PBR순","EPS비교"]
     var isInitStatus = false
     let activityIndicator:NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: NVActivityIndicatorType.ballTrianglePath, color:UIColor.untSelectColor, padding: 0.0)
     
@@ -64,6 +64,16 @@ class StockViewController: UITableViewController,UICollectionViewDataSource,UICo
         if self.isInitStatus == true {
             self.collectionView(self.headerView, didDeselectItemAt: IndexPath(item: 0, section: 0))
             self.isInitStatus = false
+        }
+        let option = self.sortOption[indexPath.row]
+        if "EPS비교" == option {
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "epsCompareVC") as UIViewController
+            var navigation = UINavigationController()
+            navigation.pushViewController(viewController, animated: false)
+            //self.presentViewController(viewController, animated: false, completion: nil)
+            self.present(navigation, animated: true, completion: {
+                
+            });
         }
         let cell:SortOptionCell = collectionView.cellForItem(at: indexPath) as! SortOptionCell
         cell.backgroundColor = UIColor.untSelectColor
